@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mcahelper</string>
+	<string name="btn_model">Model Qstns.</string>
+	<string name="btn_tricks">Tricks</string>
+	<string name="btn_forum">Forum</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
