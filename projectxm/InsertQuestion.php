@@ -2,7 +2,7 @@
 $erors = array();                      // set an empty array that will contains the errors
 
 // Check for form submission
-if (isset($_POST['c2']) && isset($_POST['c3']) && isset($_POST['c4']) && isset($_POST['c5']) && isset($_POST['c6']) && isset($_POST['c7']) && isset($_POST['c8'])) {
+if (isset(isset($_POST['c2']) && isset($_POST['c3']) && isset($_POST['c4']) && isset($_POST['c5']) && isset($_POST['c6']) && isset($_POST['c7']) && isset($_POST['c8'])) {
   // remove tags and whitespace from the beginning and end of form data
   //$_POST = array_map("strip_tags", $_POST);
   //$_POST = array_map("trim", $_POST);
