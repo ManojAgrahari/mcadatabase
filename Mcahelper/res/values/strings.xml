@@ -2,9 +2,11 @@
 <resources>
 
     <string name="app_name">Mcahelper</string>
-	<string name="btn_model">Model Qstns.</string>
-	<string name="btn_tricks">Tricks</string>
-	<string name="btn_forum">Forum</string>
+    <string name="btn_model">Model Qstns.</string>
+    <string name="btn_tricks">Tricks</string>
+    <string name="btn_forum">Forum</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_model_question">ModelQuestion</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
