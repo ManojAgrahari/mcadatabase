@@ -16,9 +16,10 @@ $conn = new mysqli('localhost', 'root', '', 'mcadatabase');
 	if ($result->num_rows > 0 ) {
 		// output data of each row from $result
 		while($row = $result->fetch_assoc()) {
-			
+		
 		//	echo '<br /> id: '. $row['id']. ' - question: '. $row['Question']. ' -	option1: '. $row['Option1']. ' -	option2: '. $row['Option2']. ' -	option3: '. $row['Option3'];
-			echo json_encode($row);
+			// ONLY JSON PARSING TO BE PRINTED. SUPPORTED BY ANDROID TOO.
+		echo json_encode($row);
 		}
 		//echo ($result);
 		
