@@ -8,14 +8,10 @@ if (mysqli_connect_errno()) {
 }
 
 // sql query for CREATE TABLE
-$sql = "CREATE TABLE `OnlineExam` (
+$sql = "CREATE TABLE `ImageSource` (
  `id` INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
- `Question` VARCHAR(20000) NOT NULL,
- `Option1` VARCHAR(200) NOT NULL,
- `Option2` VARCHAR(200) NOT NULL,
- `Option3` VARCHAR(200) NOT NULL,
- `Option4Right` VARCHAR(200) NOT NULL,
- `Solution` TEXT(10000) NOT NULL 
+ `url` TEXT(10000) NOT NULL, 
+ `superId` INT(5) UNSIGNED 
  ) CHARACTER SET utf8 COLLATE utf8_general_ci"; 
 
 // Performs the $sql query on the server to create the table

@@ -2,7 +2,7 @@
 $erors = array();                      // set an empty array that will contains the errors
 
 // Check for form submission
-if (isset($_POST['c2']) && isset($_POST['c3']) && isset($_POST['c4']) && isset($_POST['c5']) && isset($_POST['c6']) && isset($_POST['c7']) && isset($_POST['c8'])) {
+if (isset($_POST['c2']) && isset($_POST['c3']) && isset($_POST['c4']) && isset($_POST['c5']) && isset($_POST['c6']) && isset($_POST['c7'])) {
   // remove tags and whitespace from the beginning and end of form data
   //$_POST = array_map("strip_tags", $_POST);
   //$_POST = array_map("trim", $_POST);
@@ -16,7 +16,7 @@ if (isset($_POST['c2']) && isset($_POST['c3']) && isset($_POST['c4']) && isset($
   if (strlen($_POST['c5'])<1) $erors[] = 'Option3 must contain minimum 1 characters';
   if (strlen($_POST['c6'])<1) $erors[] = 'Option4 must contain minimum 1 characters';
   if (strlen($_POST['c7'])<1) $erors[] = 'Solution must contain minimum 1 characters';
-  if (strlen($_POST['c8'])>1) $erors[] = 'Visibility can contain maximum 1 character';
+ // if (strlen($_POST['c8'])>1) $erors[] = 'Visibility can contain maximum 1 character';
 
   // if no errors ($error array empty)
   if(count($erors)<1) {
@@ -35,11 +35,11 @@ if (isset($_POST['c2']) && isset($_POST['c3']) && isset($_POST['c4']) && isset($
 	$adds['c5'] = $conn->real_escape_string($_POST['c5']);
 	$adds['c6'] = $conn->real_escape_string($_POST['c6']);
 	$adds['c7'] = $conn->real_escape_string($_POST['c7']);
-	$adds['c8'] = $conn->real_escape_string($_POST['c8']);
+	//$adds['c8'] = $conn->real_escape_string($_POST['c8']);
 	
 
     // sql query for INSERT INTO users
-    $sql = "INSERT INTO `modelquestion` (`Question`, `Option1`, `Option2`, `Option3`, `Option4Right`, `Solution`, `Visibility`) VALUES ('". $adds['c2']. "', '". $adds['c3']. "', '". $adds['c4']. "', '". $adds['c5']. "', '". $adds['c6']. "', '". $adds['c7']. "', '". $adds['c8']. "')"; 
+    $sql = "INSERT INTO `onlineexam` (`Question`, `Option1`, `Option2`, `Option3`, `Option4Right`, `Solution`) VALUES ('". $adds['c2']. "', '". $adds['c3']. "', '". $adds['c4']. "', '". $adds['c5']. "', '". $adds['c6']. "', '". $adds['c7']. "')"; 
 
     // Performs the $sql query on the server to insert the values
     if ($conn->query($sql) === TRUE) {
