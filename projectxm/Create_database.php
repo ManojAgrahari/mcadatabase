@@ -8,11 +8,11 @@ if (mysqli_connect_errno()) {
 }
 
 // sql query with CREATE DATABASE
-$sql = "CREATE DATABASE `mcadatabase` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
+$sql = "CREATE DATABASE `Hotelmanganement` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
 
 // Performs the $sql query on the server to create the database
 if ($conn->query($sql) === TRUE) {
-  echo 'Database "mcadatabase" successfully created';
+  echo 'Database "registration" successfully created';
 }
 else {
  echo 'Error: '. $conn->error;

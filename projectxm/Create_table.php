@@ -1,6 +1,6 @@
 <?php
 // connect to the MySQL server
-$conn = new mysqli('localhost', 'root', '', 'mcadatabase');
+$conn = new mysqli('localhost', 'root', '', 'hotelmanganement');
 
 // check connection
 if (mysqli_connect_errno()) {
@@ -8,15 +8,18 @@ if (mysqli_connect_errno()) {
 }
 
 // sql query for CREATE TABLE
-$sql = "CREATE TABLE `ImageSource` (
+$sql = "CREATE TABLE `customers` (
  `id` INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
- `url` TEXT(10000) NOT NULL, 
- `superId` INT(5) UNSIGNED 
+ `roomNumber` TEXT(20000),
+ `name` TEXT(100) NOT NULL,
+ `phone` INT(10) NOT NULL,
+ `homeplace` TEXT(100) NOT NULL,
+ `officenumber` INT(17) NOT NULL
  ) CHARACTER SET utf8 COLLATE utf8_general_ci"; 
 
 // Performs the $sql query on the server to create the table
 if ($conn->query($sql) === TRUE) {
-  echo 'Table "OnlineExam" successfully created';
+  echo 'Table "customers" successfully created';
 }
 else {
  echo 'Error: '. $conn->error;
